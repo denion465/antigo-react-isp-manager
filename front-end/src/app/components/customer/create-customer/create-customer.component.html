@@ -1,0 +1,27 @@
+<mat-card>Formulario para Cadastro</mat-card>
+<form>
+    <mat-form-field appearance="fill" class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="customer.name" name="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput [(ngModel)]="customer.lastname" name="lastname">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form">
+        <mat-label>Nascimento</mat-label>
+        <input matInput [(ngModel)]="customer.birth" name="birth">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form">
+        <mat-label>E-mail</mat-label>
+        <input matInput [(ngModel)]="customer.email" name="email">
+    </mat-form-field>   
+</form>
+<button mat-raised-button  color="primary" (click)="submitCustomer()">
+    Salvar
+</button>
+
+<button mat-raised-button routerLink="/">
+    Cancelar
+</button>
+
