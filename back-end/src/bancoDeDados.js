@@ -1,21 +1,22 @@
-const datab ='mongodb://localhost/customers'
 // const sequence = {
 //     _id: 1,
 //     get id() { return this._id++ }
 // };
 
+// const customers = {};
+
 // function saveCustomer(customers) {
 //     if (!customers.id) customers.id = sequence.id
 //     customers[customers.id] = customers
-//     return customer
+//     return produto
 // };
 
 // function getCustomer(id) {
-//     return customers[id] || {}
+//     return produtos[id] || {}
 // };
 
 // function getCustomers() {
 //     return Object,values(customers)
 // };
 
-// module.exports = {saveCustomer, getCustomer, getCustomers, datab };
+// module.exports = {saveCustomer, getCustomer, getCustomers };
