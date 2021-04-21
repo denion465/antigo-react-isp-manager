@@ -1,27 +1,17 @@
-# FrontEnd + BackEnd + MongoDB
+# Front-end + Back-end + MongoDataBase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
-## Development server
+## Front-end server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+First Run `npm i` in front-end directory for download dependencies.
+Run `ng serve` in fron-end directory. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Back-end server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+First Run `npm i` in back-end directory for download dependencies.
+Run `npm start` in back-end directory for stating the Server, wait for confirmation in console that's working.
 
-## Build
+## About MongoDB
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Database is running in local Machine, check if the MongoDB service is running.
