@@ -1,5 +1,5 @@
+import { Customer } from './../customer.model';
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../customer.model';
 import { CustomersService } from '../../../services/customers.service';
 
 @Component({
@@ -10,9 +10,9 @@ import { CustomersService } from '../../../services/customers.service';
 export class CreateCustomerComponent implements OnInit {
 
   customer: Customer = {
-    name: null,
-    lastname: null,
-    birth: null,
+    firstName: null,
+    lastName: null,
+    age: null,
     email: null
   }
 
@@ -21,17 +21,15 @@ export class CreateCustomerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitCustomer() {
-    if ( !this.customer.name || !this.customer.lastname || !this.customer.birth || !this.customer.email) {
-      alert('dados incompletos')
-    } else if (this.customer) {
-      this.customersService.postCustomer(this.customer)
-      .subscribe(() => {
-        console.log("ok")
-      })
-    }
+  submitCustomer(): void {
+    this.customersService.createCustomer(this.customer)
+    .subscribe(() => {
+      alert("Sucess to create Customer")
+    }, (err) => {
+        console.log(err)
+    } )
+  }
 
-    }
   
 
 }

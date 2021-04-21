@@ -1,6 +1,6 @@
 export interface Customer {
-    name: String
-    lastname: String
-    birth: String
+    firstName: String
+    lastName: String
+    age: Number
     email: String
 }

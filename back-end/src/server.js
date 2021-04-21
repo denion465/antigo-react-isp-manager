@@ -1,3 +1,7 @@
+let data = new Date();
+let hour = data.getHours();
+let min = data.getMinutes();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const customersRouter = require("./routes/customer")
@@ -14,7 +18,7 @@ const app = express();
         useUnifiedTopology: true
 
     }).then(() => {
-        console.log(`Database Running`);
+        console.log(`[info] ${hour}:${min} Database Running`);
     },
     error => {
         console.log(`Database error: ${error}`);
@@ -26,4 +30,4 @@ app.use(express.json());
  // API root
 app.use('/', customersRouter)
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.listen(PORT, () => console.log(`[info] ${hour}:${min} Server is running on port ${PORT}`));
