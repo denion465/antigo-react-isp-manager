@@ -1,0 +1,31 @@
+GET http://localhost:4100/customers
+
+############
+
+GET http://localhost:4100/customers/60805ae3440023e889c4ba8e
+
+###########
+
+POST http://localhost:4100/customers
+Content-Type: application/json
+
+{
+  "firstName": "Ana",
+  "lastName": "Silva",
+  "age": 23,
+  "email": "ana.s.123@gmail.com"
+}
+
+###########
+
+DELETE  http://localhost:4100/customers/60805ae3440023e889c4ba8e
+
+
+############
+
+PATCH  http://localhost:4100/customers/60805ae3440023e889c4ba8e
+Content-Type: application/json
+
+{
+    "firstName": ""
+}
