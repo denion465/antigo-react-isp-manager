@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const routes = express.Router();
-const Customer = require("../models/customer")
+import Customer from '../models/customer'
 
 // Get All Customers
 routes.get('/customers', async (req, res) => {
@@ -29,9 +29,9 @@ routes.post('/customers', async (req, res) => {
     }
 });
 
-async function getCustomer(req, res, next) {
+async function getCustomer(req, res, next, err)  {
     try {
-        customer = await Customer.findById(req.params.id);
+        const customer = await Customer.findById(req.params.id);
         if (customer == null) {
             return res.status(404).json({ message: err.message });
         }
@@ -39,7 +39,7 @@ async function getCustomer(req, res, next) {
         return res.status(500).json({ message: err.message })
     }
 
-    res.customer = customer;
+    res.customer = Customer;
     next();
 };
 
@@ -77,4 +77,4 @@ routes.patch('/customers/:id', getCustomer, async (req, res) => {
     }
 });
 
-module.exports = routes;
+export  { routes }
