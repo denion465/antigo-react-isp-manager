@@ -1,9 +1,10 @@
 # back-end
 /back-end/node_modules
-/back-end/routes.rest
+
 
 
 #front-end
 /front-end/node_modules
-/front-end/.browserslistrc
+/front-end/.next
+
 
