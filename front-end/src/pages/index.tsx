@@ -1,7 +1,11 @@
-export default function({}) {
+import styles from './home.module.scss';
+
+
+
+export default function Home({}) {
     return (
         <div>
-            dasdsads
+            
         </div>
     )
 }

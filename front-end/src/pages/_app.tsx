@@ -2,12 +2,16 @@ import { Header } from "../components/Header"
 import "../styles/global.scss"
 
 
-function MyApp({}) {
+function MyApp({Component, pageProps}) {
     return (
-        <main>
-            <h1>Hello Wordl</h1>
-            <Header/>
-        </main>
+        <div>
+            <main>
+                <Header />
+                <Component {...pageProps} />
+            </main>
+            
+        </div>
+
     )
 }
 
