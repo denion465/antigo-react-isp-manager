@@ -1,5 +1,9 @@
+import styles from './styles.module.scss'
+
 export default function searchCustomer() {
     return (
-        <div>works</div>
+        <div className={styles.searchContairner}>
+            works
+        </div>
     )
 }

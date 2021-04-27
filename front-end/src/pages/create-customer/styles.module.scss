@@ -1,8 +1,9 @@
 .formContairner {
     position: absolute;
-    top: 22vh;
-    left:35vh ;
+    top: 10vh;
+    left:31vh ;
     display: flex;
+    
 
 
     form {
@@ -11,4 +12,26 @@
         
     }
 
+    button {
+        height: 8vh;
+        width: 15vh;
+        margin-left: 95vh;
+        margin-top: 15vh;
+        
+    }
+
 }
+
+.card {
+
+    p{
+        
+        font-size: 3vh;
+        font-weight: bolder;
+        color:var(--gray-800);
+    }
+ 
+}
+
+
+
