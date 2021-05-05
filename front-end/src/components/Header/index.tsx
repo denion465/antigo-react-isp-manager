@@ -40,7 +40,6 @@ export function Header() {
                         Cadastrar cliente
                         </button>
                     </Link>
-                    <div className={styles.contentBox} />
                 </div>
             </div>    
         </div>
