@@ -1,24 +1,15 @@
 import express from 'express';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+import 'reflect-metadata';
 
-dotenv.config();
+import './database';
+import routes from './routes';
 
-const PORT = process.env.PORT || 3333;
-const db = process.env.DATABASE_URL;
 const app = express();
-
-mongoose.Promise = global.Promise;
-mongoose.connect(`${db}`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log('Database Running');
-},
-error => {
-    console.log(`Database error: ${error}`)
-});
 
 app.use(express.json());
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.use(routes);
+
+app.listen(3333, () => {
+  console.log('👽 Server Started on port 3333!');
+});
